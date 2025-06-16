@@ -1,0 +1,375 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: yellow;
+  padding-top: 100px;
+}
+
+
+    a {
+      text-decoration: none;
+      color: yellow;
+    }
+
+    /* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black; 
+  z-index: 1000; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+}
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 60px 40px;
+      gap: 40px;
+    }
+
+    .hero-text {
+      flex: 1 1 400px;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      font-weight: 800;
+    }
+
+    .hero-text h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+
+    .hero-text p {
+      margin: 20px 0;
+      font-size: 1.1rem;
+    }
+
+    .highlight {
+      color: #FFD700;
+    }
+
+    .btn {
+      background-color: #FFD700;
+      color: black;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #fff200;
+    }
+
+    .hero-img {
+      position: relative;
+      text-align: center;
+      flex: 1 1 300px;
+    }
+
+    .hero-img img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 50%;
+      background-color: #FFD700;
+      border: 4px solid yellow;
+    }
+
+.floating-socials {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1001;
+}
+
+.floating-socials img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(100%);
+  transition: transform 0.3s;
+}
+
+.floating-socials img:hover {
+  transform: scale(1.2);
+}
+
+    /* About Section */
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 60px 20px;
+      justify-content: center;
+      gap: 40px;
+      background-color: #111;
+    }
+
+    .about-left {
+      max-width: 500px;
+    }
+
+    .subtitle {
+      color: #FFD700;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: 16px;
+      color: #FFD700;
+    }
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.skill {
+  width: 100%;
+}
+
+.skill span {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.bar {
+  background: #333;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background-color: #FFD700;
+  border-radius: 5px;
+}
+
+/* Learning Section */
+.learning-section {
+  background-color: #000;
+  color: #FFD700;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.learning-section .subtitle {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #FFD700;
+}
+
+.learning-section .title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.learning-section .description {
+  font-size: 16px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  color: #FFD700;
+}
+
+.learning-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.learning-card {
+  background-color: #111;
+  border: 1px solid #FFD700;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.learning-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.badge {
+  background-color: #FFD700;
+  color: #000;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.date {
+  font-size: 14px;
+  color: #FFD700;
+}
+
+.learning-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #FFD700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background-color: #000;
+  color: #FFD700;
+}
+
+.learning-text h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.learning-text p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #FFD700;
+}
+
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero-text {
+        padding: 0;
+      }
+
+      .socials {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+
+      .hero-text h2 {
+        font-size: 1.5rem;
+      }
+
+      .btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+      }
+
+      .about-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .skills {
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .hero-img img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .learning-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .learning-card {
+    width: 100%;
+  }
+
+  .learning-body {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .avatar {
+    margin-bottom: 10px;
+  }
+}
