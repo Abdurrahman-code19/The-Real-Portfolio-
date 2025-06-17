@@ -10,6 +10,36 @@
     html {
       scroll-behavior: smooth;
     }
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      color: yellow;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 10px;
+        border-bottom: 1px solid #fff;
+      }
+    }
   </style>
 </head>
 <body>
@@ -17,7 +47,8 @@
   <!-- NAVBAR -->
   <header class="navbar">
     <div class="logo">ABAYOMI</div>
-    <nav class="nav-links">
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    <nav class="nav-links" id="navLinks">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -36,15 +67,15 @@
     </div>
     <div class="hero-img">
       <img src="me.png" alt="Abayomi Avatar" />
-<div class="floating-socials">
-  <a href="https://github.com/Abdurrahman-code19" target="_blank">
-    <img src="Githubicon.png" alt="GitHub" />
-  </a>
-  <a href="https://www.linkedin.com/in/abdurrahman-oriolowo-aba188352/" target="_blank">
-    <img src="Linkedinicon.png" alt="LinkedIn" />
-  </a>
-</div>
-
+    </div>
+    <div class="floating-socials">
+      <a href="https://github.com/Abdurrahman-code19" target="_blank">
+        <img src="Githubicon.png" alt="GitHub" />
+      </a>
+      <a href="https://www.linkedin.com/in/abdurrahman-oriolowo-aba188352/" target="_blank">
+        <img src="Linkedinicon.png" alt="LinkedIn" />
+      </a>
+    </div>
   </section>
 
   <!-- ABOUT -->
@@ -85,110 +116,115 @@
       </div>
     </div>
   </section>
-<section class="learning-section">
-  <h3 class="subtitle">≫ LEARNING EXPERIENCE</h3>
-<h2 class="title">Growing Through Learning</h2>
-<p class="description">
-  A continuous journey of acquiring in-demand web development software development skills through structured learning, real-world projects, and hands-on practice — all aimed at building confidence, competence, and creativity in tech.
-</p>
 
+  <!-- LEARNING -->
+  <section class="learning-section">
+    <h3 class="subtitle">≫ LEARNING EXPERIENCE</h3>
+    <h2 class="title">Growing Through Learning</h2>
+    <p class="description">
+      A continuous journey of acquiring in-demand web development software development skills through structured learning, real-world projects, and hands-on practice — all aimed at building confidence, competence, and creativity in tech.
+    </p>
 
-  <div class="learning-wrapper">
-    <!-- Learning Card 1 -->
-    <div class="learning-card">
-      <div class="learning-header">
-        <span class="badge">Web Designer</span>
-        <span class="date">January 2025 - Till Date</span>
+    <div class="learning-wrapper">
+      <!-- Learning Card 1 -->
+      <div class="learning-card">
+        <div class="learning-header">
+          <span class="badge">Web Designer</span>
+          <span class="date">January 2025 - Till Date</span>
+        </div>
+        <div class="learning-body">
+          <div class="avatar">PLP</div>
+          <div class="learning-text">
+            <h3>Power Learn Project Academy</h3>
+            <p>
+              I honed my skills as a Web Designer, contributing to the creation of engaging, user-centric websites that met client expectations and industry standards. My role involved combining creativity with technical expertise to deliver visually stunning and highly functional digital solutions.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="learning-body">
-        <div class="avatar">PLP</div>
-        <div class="learning-text">
-          <h3>Power Learn Project Academy</h3>
-          <p>
-            I honed my skills as a Web Designer, contributing to the creation of engaging, user-centric websites that met client expectations and industry standards. My role involved combining creativity with technical expertise to deliver visually stunning and highly functional digital solutions.
-          </p>
+
+      <!-- Learning Card 2 -->
+      <div class="learning-card">
+        <div class="learning-header">
+          <span class="badge">Front-end Development</span>
+          <span class="date">May 2025 - Till Date</span>
+        </div>
+        <div class="learning-body">
+          <div class="avatar">SH</div>
+          <div class="learning-text">
+            <h3>SkillHints</h3>
+            <p>
+              At SkillHints, I have been actively immersed in a continuous learning journey focused on web development and digital technologies. Through hands-on projects and structured guidance, I’ve gained valuable experience in building responsive, interactive, and user-centric websites.
+            </p>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Learning Card 2 -->
-    <div class="learning-card">
-      <div class="learning-header">
-        <span class="badge">Front-end Development</span>
-        <span class="date">May 2025 - Till Date</span>
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <h3 class="subtitle">≫ MY SERVICES</h3>
+    <h2 class="title service-title">I'm Specialized In</h2>
+
+    <div class="services-wrapper">
+      <div class="service-card">
+        <img src="service 1.png" alt="Creative Web Design Icon" class="service-icon" />
+        <h3>Creative Web Design</h3>
+        <p>Crafting visually stunning and engaging website designs tailored to your brand identity.</p>
       </div>
-      <div class="learning-body">
-        <div class="avatar">SH</div>
-        <div class="learning-text">
-          <h3>SkillHints</h3>
-          <p>
-            At SkillHints, I have been actively immersed in a continuous learning journey focused on web development and digital technologies. Through hands-on projects and structured guidance, I’ve gained valuable experience in building responsive, interactive, and user-centric websites. My time at SkillHints has strengthened both my technical skills and problem-solving abilities, and I continue to learn and grow within the program, constantly pushing the boundaries of my creativity and technical expertise.
-          </p>
+      <div class="service-card">
+        <img src="service 2.png" alt="UI/UX Icon" class="service-icon" />
+        <h3>User-Centered UI/UX Design</h3>
+        <p>Conducting user research, usability testing, and crafting interactive prototypes.</p>
+      </div>
+      <div class="service-card">
+        <img src="service 3.png" alt="Front-End Icon" class="service-icon" />
+        <h3>Front-End Development</h3>
+        <p>Transforming designs into functional, user-friendly websites using HTML, CSS, Bootstrap, and JavaScript.</p>
+      </div>
+      <div class="service-card">
+        <img src="service 4.png" alt="Back-End Icon" class="service-icon" />
+        <h3>Back-End Development</h3>
+        <p>Developing robust server-side applications using C# and ASP.NET for secure and efficient functionality.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio-section" id="portfolio">
+    <h3 class="subtitle">≫ PORTFOLIO</h3>
+    <h2 class="title">Some of My Works</h2>
+
+    <div class="portfolio-wrapper">
+      <!-- Project Card 1 -->
+      <div class="project-card">
+        <img src="6.png" alt="image Alternative" />
+        <div class="project-info">
+          <h4>Project Based On</h4>
+          <a href="#" class="project-link">Project Name</a>
+          <p>Short Note About Project.</p>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="project-card">
+        <img src="7.png" alt="image Alternative" />
+        <div class="project-info">
+          <h4>Project Based On</h4>
+          <a href="#" class="project-link">Project Name</a>
+          <p>Short Note About Project.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="services-section" id="services">
-  <h3 class="subtitle">≫ MY SERVICES</h3>
-  <h2 class="title service-title">I'm Specialized In</h2>
-
-  <div class="services-wrapper">
-    <div class="service-card">
-      <img src="service 1.png" alt="Creative Web Design Icon" class="service-icon" />
-      <h3>Creative Web Design</h3>
-      <p>Crafting visually stunning and engaging website designs tailored to your brand identity.</p>
-    </div>
-    <div class="service-card">
-      <img src="service 2.png" alt="UI/UX Icon" class="service-icon" />
-      <h3>User-Centered UI/UX Design</h3>
-      <p>Conducting user research, usability testing, and crafting interactive prototypes.</p>
-    </div>
-    <div class="service-card">
-      <img src="service 3.png" alt="Front-End Icon" class="service-icon" />
-      <h3>Front-End Development</h3>
-      <p>Transforming designs into functional, user-friendly websites using HTML, CSS, Bootstrap, and JavaScript.</p>
-    </div>
-    <div class="service-card">
-      <img src="service 4.png" alt="Back-End Icon" class="service-icon" />
-      <h3>Back-End Development</h3>
-      <p>Developing robust server-side applications using C# and ASP.NET for secure and efficient functionality.</p>
-    </div>
-  </div>
-</section>
-
-<!-- PORTFOLIO -->
-<section class="portfolio-section" id="portfolio">
-  <h3 class="subtitle">≫ PORTFOLIO</h3>
-  <h2 class="title">Some of My Works</h2>
-
-  <div class="portfolio-wrapper">
-    <!-- Project Card 1 -->
-    <div class="project-card">
-      <img src="6.png" alt="image Alternative" />
-      <div class="project-info">
-        <h4>Project Based On</h4>
-        <a href="#" class="project-link">Project Name</a>
-        <p>
-          Short Note About Project.
-      </div>
-    </div>
-
-    <!-- Project Card 2 -->
-    <div class="project-card">
-      <img src="7.png" alt="image Alternative" />
-      <div class="project-info">
-        <h4>Project Based On</h4>
-        <a href="#" class="project-link">Project Name</a>
-        <p>
-          Short Note About Project.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("show");
+    }
+  </script>
 
 </body>
-</html> 
+</html>
